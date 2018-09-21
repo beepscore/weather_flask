@@ -1,6 +1,10 @@
 import csv
 import json
 
+"""
+Reads weather file seattle-data.csv, drops some fields, writes to .json
+"""
+
 # Define the header names so we can specify them when reading the CSV
 fieldnames = (
         "STATION","NAME","DATE","AWND","PRCP","SNOW","SNWD",
