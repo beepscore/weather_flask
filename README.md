@@ -26,3 +26,16 @@ $ python app.py
  * Debugger PIN: 250-850-674
 127.0.0.1 - - [20/Sep/2018 19:35:39] "GET / HTTP/1.1" 200 -
 127.0.0.1 - - [20/Sep/2018 19:35:39] "GET /favicon.ico HTTP/1.1" 404 -
+
+# Appendix configure flask for production
+with default configuration, flask warns ~ "don't use in production"
+
+## debug
+To use in production, turn off debug mode.
+This way errors won't be exposed to user's browser.
+
+## content delivery network
+Also by default flask serves all files.
+In production, use a separate content delivery network to serve large static files such as images.
+Tell flask to use cdn for those files.
+
