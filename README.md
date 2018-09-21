@@ -28,14 +28,17 @@ $ python app.py
 127.0.0.1 - - [20/Sep/2018 19:35:39] "GET /favicon.ico HTTP/1.1" 404 -
 
 # Appendix configure flask for production
-with default configuration, flask warns ~ "don't use in production"
+with default configuration, flask warns
+   WARNING: Do not use the development server in a production environment.
 
 ## debug
 To use in production, turn off debug mode.
+In app.py call app.run(debug=False)
 This way errors won't be exposed to user's browser.
 
-## content delivery network
+## use a different server for large static files
 Also by default flask serves all files.
-In production, use a separate content delivery network to serve large static files such as images.
-Tell flask to use cdn for those files.
+In production, use a separate server to serve large static files such as images.
+https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/
+Can use content delivery network or amazon s3 or apache or nginx.
 
