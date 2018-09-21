@@ -4,10 +4,9 @@ from flask import Flask
 app = Flask(__name__)
 
 # establish a Flask route so that we can serve HTTP traffic on that route
-@app.route('/')
-def weather():
-    # We hardcode some information to be returned
-    return "{'Temperature': '50'}"
+@app.route('/weather/<date>')
+def weather(date):
+    return 'some information'
 
 # Get setup so that if we call the app directly (and it isn't being imported elsewhere)
 # it will then run the app with the debug mode as True
