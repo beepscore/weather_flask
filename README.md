@@ -1,4 +1,5 @@
 # Purpose
+Practice using Flask.
 
 # References
 
