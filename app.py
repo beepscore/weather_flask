@@ -3,6 +3,7 @@
 from flask import Flask, render_template
 import json
 
+
 def weather_report(date):
     with open('./data/seattle-data.json', 'r') as jsonfile:
         weather_data = json.loads(jsonfile.read())
@@ -16,11 +17,13 @@ app = Flask(__name__)
 
 # set Flask routes so that we can serve HTTP traffic on them
 
+
 # / is the website root, the entry point
 @app.route('/')
 def index():
     # render_template searches directory templates
     return render_template('index.html')
+
 
 # route passes url date to weather function
 # allow for empty date
