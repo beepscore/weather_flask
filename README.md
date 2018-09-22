@@ -13,6 +13,9 @@ https://github.com/beepscore/basic_flask
 ## Build a Python Web Server with Flask
 https://projects.raspberrypi.org/en/projects/python-web-server-with-flask
 
+## Creating graphs using flask and D3
+http://benalexkeen.com/creating-graphs-using-flask-and-d3/
+
 # Results
 
 ## how to run app
@@ -36,6 +39,8 @@ start terminal
  * Debugger PIN: 250-850-674
 127.0.0.1 - - [20/Sep/2018 19:35:39] "GET / HTTP/1.1" 200 -
 127.0.0.1 - - [20/Sep/2018 19:35:39] "GET /favicon.ico HTTP/1.1" 404 -
+
+## TODO: consider add graph
 
 # Appendix configure flask for production
 with default configuration, flask warns
