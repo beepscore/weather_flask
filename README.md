@@ -10,6 +10,9 @@ https://www.fernandomc.com/posts/your-first-flask-api/
 ## basic_flask
 https://github.com/beepscore/basic_flask
 
+## Build a Python Web Server with Flask
+https://projects.raspberrypi.org/en/projects/python-web-server-with-flask
+
 # Results
 
 ## how to run app
