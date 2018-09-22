@@ -2,14 +2,19 @@
 # http://jinja.pocoo.org/
 from flask import Flask, render_template
 import json
+from weather_prop import WeatherProp
 
 
 def weather_report(date):
+    """
+    :param date:
+    :return: dict
+    """
     with open('./data/seattle-data.json', 'r') as jsonfile:
+        # parse json string to a python object
         weather_data = json.loads(jsonfile.read())
 
-    # get the data for the requested date and return it as a json string
-    return json.dumps(weather_data[date])
+    return weather_data[date]
 
 
 # create a Flask app
@@ -32,13 +37,22 @@ def index():
 @app.route('/weather/<date>')
 def weather(date=None):
     if date is None:
-        return render_template('page.html', date='', weather_report='n/a')
+        return render_template('page.html', date='')
 
     spaced_date = ' ' + date
-    weather_string = weather_report(date)
+    weather_dict = weather_report(date)
 
     # pass info to render_template
-    return render_template('page.html', date=spaced_date, weather_report=weather_string)
+    return render_template('page.html',
+                           date=spaced_date,
+                           anwd=weather_dict[WeatherProp.AWND.value],
+                           prcp=weather_dict[WeatherProp.PRCP.value],
+                           snow=weather_dict[WeatherProp.SNOW.value],
+                           snwd=weather_dict[WeatherProp.SNWD.value],
+                           tavg=weather_dict[WeatherProp.TAVG.value],
+                           tmax=weather_dict[WeatherProp.TMAX.value],
+                           tmin=weather_dict[WeatherProp.TMIN.value]
+                           )
 
 
 # https://docs.python.org/3/library/__main__.html
