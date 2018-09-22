@@ -2,19 +2,26 @@
 
 # References
 
-http://fernandomc.com
-
 ## Creating Your First Python API with Flask
 https://www.fernandomc.com/posts/your-first-flask-api/
 
 ## Redmond python meetup 2018-09-20
 
-# Appendix
+## basic_flask
+https://github.com/beepscore/basic_flask
 
-## run server
+# Results
 
-In terminal
-$ python app.py
+## how to run app
+start terminal
+
+### activate virtual environment
+
+    conda activate beepscore
+
+### start server
+    $ python app.py
+
  * Serving Flask app "app" (lazy loading)
  * Environment: production
    WARNING: Do not use the development server in a production environment.
