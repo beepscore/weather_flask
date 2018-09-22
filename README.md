@@ -7,6 +7,7 @@ Practice using Flask.
 https://www.fernandomc.com/posts/your-first-flask-api/
 
 ## Redmond python meetup 2018-09-20
+https://www.meetup.com/Redmond-Python-User-Group/events/254677176/
 
 ## basic_flask
 https://github.com/beepscore/basic_flask
