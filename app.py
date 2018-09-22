@@ -45,7 +45,7 @@ def weather(date=None):
     # pass info to render_template
     return render_template('page.html',
                            date=spaced_date,
-                           anwd=weather_dict[WeatherProp.AWND.value],
+                           awnd=weather_dict[WeatherProp.AWND.value],
                            prcp=weather_dict[WeatherProp.PRCP.value],
                            snow=weather_dict[WeatherProp.SNOW.value],
                            snwd=weather_dict[WeatherProp.SNWD.value],
